@@ -1,6 +1,28 @@
 import { sampleItems } from "@/site.config";
 import { getPublicClient } from "@/lib/supabase";
 import type { Item } from "@/lib/types";
+import { defaultHeroTexts, heroTextFields, mergeHeroTexts, type HeroTexts } from "@/lib/hero-texts";
+
+/**
+ * 첫 화면(히어로) 글자를 가져옵니다.
+ * - Supabase가 연결 안 됐거나 읽기에 실패하면: site.config.ts 의 기본 글자
+ * - 연결됐으면: 관리자 페이지에서 바꾼 글자 (바꾸지 않은 글자는 기본 글자)
+ */
+export async function getHeroTexts(): Promise<HeroTexts> {
+  const supabase = getPublicClient();
+  if (!supabase) return defaultHeroTexts();
+
+  const { data, error } = await supabase
+    .from("site_texts")
+    .select("key, value")
+    .in("key", heroTextFields.map((f) => f.key));
+
+  if (error) {
+    console.error("[getHeroTexts] Supabase 읽기 실패:", error.message);
+    return defaultHeroTexts();
+  }
+  return mergeHeroTexts(data);
+}
 
 /**
  * 특정 섹션의 카드 목록을 가져옵니다.
