@@ -32,23 +32,24 @@ export const siteConfig = {
       "이 문장을 바꿔 나를 소개해 보세요. site.config.ts 파일에서 글자만 바꾸면 여기가 바뀝니다.",
     primaryCta: { label: "더 알아보기", href: "#features" },
     secondaryCta: { label: "연락하기", href: "#contact" },
+    backgroundImage: "/images/hero-independence-hall-large.jpg", // 배경 사진 (public/images 폴더). 비우면 흰 배경
   },
 
   /* 소개 섹션 */
   about: {
     eyebrow: "About",
-    title: "소개",
+    title: "천안(天安)의 유래",
     paragraphs: [
-      "여기에 나 또는 우리 팀, 가게, 프로젝트에 대한 소개를 적습니다.",
-      "두 번째 문단도 필요하면 이렇게 줄을 추가하면 됩니다.",
+      "왕건은 후삼국 통일을 위한 전략적 요충지였던 동도솔과 서도솔을 통합해 930년 천안부를 설치했어요.",
+      "‘천안(天安)’은 하늘 아래 세상이 편안해진다는 의미로, 후삼국 통일과 천하의 안정을 염원한 이름으로 해석되기도 해요.",
     ],
   },
 
   /* 기능(항목) 섹션의 제목 — 카드 목록 자체는 관리자 페이지(/admin)에서 관리 */
   features: {
-    eyebrow: "Features",
-    title: "기능",
-    description: "관리자 페이지에서 카드를 추가·수정·삭제할 수 있는 영역입니다.",
+    eyebrow: "Hot Place",
+    title: "대표 명소",
+    description: "우리의 자부심, 마침내 천안",
   },
 
   /* 연락처 섹션 */

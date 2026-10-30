@@ -45,6 +45,10 @@
 
   --destructive: #dc2626;
 
+  /* 첫 화면(히어로) 첫 번째 버튼 색 (민트) */
+  --mint: #3eb489;
+  --mint-foreground: #0b2e22;
+
   --border: #e5e5e5;
   --input: #e5e5e5;
   --ring: #a3a3a3;
@@ -93,6 +97,8 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
+  --color-mint: var(--mint);
+  --color-mint-foreground: var(--mint-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
