@@ -49,7 +49,7 @@ export const siteConfig = {
   features: {
     eyebrow: "Hot Place",
     title: "대표 명소",
-    description: "우리의 자부심, 마침내 천안",
+    description: "마침내 우리의 자부심, 천안",
   },
 
   /* 연락처 섹션 */
